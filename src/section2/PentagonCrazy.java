@@ -10,27 +10,28 @@ public class PentagonCrazy {
 
 	private void makePrettyThings() {
 		// 1. Create a new Robot
-
+Robot Ajax4 = new Robot();
 		// 3. Put the robot's pen down
-
+Ajax4.penDown();
 		// 8. Make the robot go at maximum speed (100)
-
+Ajax4.setSpeed(100);
 		// 9. Set the pen to a color that you like for the shape
-
+Ajax4.setPenColor(Color.blue);
 		// 4. Make a variable for the number of sides you want (can’t test this one)
-
+int s = 7;
 		// 5. Make a second variable for the angle you want the robot to turn. Hint: you can divide in Java using "/". Can’t test until step 6
-
+int a = 360/s;
 		// 7. Use a for loop to repeat the steps below (#2, #10, #6, #11) 200 times. When this is done you should see a pentagon
-
+for (int i = 0; i < 200; i++) {
 			// 2. Move the robot 200 pixels
-	
+	Ajax4.move(i);
 			// 10. Change the previous line of code to make the robot move "i" pixels instead of 200 
 	
 			// 6. Turn the robot the amount in your angle variable
-	
+	Ajax4.turn(a);
 			// 11. Turn the robot one more degree
-
+Ajax4.turn(1);
+	}
 	}
 
 	// Variations:
@@ -42,3 +43,4 @@ public class PentagonCrazy {
 		new PentagonCrazy().makePrettyThings();
 	}
 }
+
